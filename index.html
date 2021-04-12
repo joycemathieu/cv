@@ -9,14 +9,16 @@
         
         <title>CV développeuse web - Joyce MATHIEU</title>
 
-        <link rel="stylesheet" href="style.css"/>
-        <link rel="stylesheet" href="/lib/w3.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="./css/style.css"/>
+
+        <script src="https://kit.fontawesome.com/94b67a5756.js" crossorigin="anonymous"></script>
+
     </head>     
 
     <body>
         <header>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
                 <a class="navbar-brand" href="#accueil">Accueil</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -25,7 +27,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#competences">Compétences <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="#competences">Compétences</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#diplomes">Diplômes</a>
@@ -40,26 +42,28 @@
                             <a class="nav-link" href="#loisirs">Loisirs</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#contact">Contact</a>
+                            <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
+                                sagittis lacus vel augue laoreet rutrum faucibus.">
+                                Contact
+                            </button>
                         </li>
                     </ul>
                 </div> 
             </nav>
-            <h1>
-                Bonjour, je m'appelle Joyce et je suis <br/>
-                <span class="text-little">Développeuse Web et web mobile en formation.</span>
-            </h1> 
+            <div id="accueil" class="jumbotron">
+                <h1 class="display-4">Bonjour, je m'appelle Joyce</h1>
+                <p class="lead">Je suis Développeuse Web et web mobile en formation.</p>
+                <hr class="my-4">
+                <p>Vous trouverez mon CV version papier ci-dessous.</p>
+                <a class="btn btn-primary btn-lg" href="cvjoyce.pdf" role="button">Télécharger mon cv</a>
+                <div class="icon">
+                    <i class="fas fa-code"></i>
+                    <i class="fas fa-server"></i>
+                    <i class="fas fa-mobile-alt"></i>
+                    <i class="fas fa-pencil-ruler"></i>
+                </div>
+            </div> 
         </header>
-
-        <section id="about">
-            <h2 class="hi">A propos de moi</h2>
-                <p class="name">Je suis Joyce,</p>
-                    <small>Je suis actuellement en formation pour devenir développeuse web et web mobile.</small>
-                        <a href="cvjoyce.pdf">
-                            <i class="file-download"></i> Télécharger mon CV
-                        </a>
-        </section>
-
         <section id="competences">
             <div class="section-titre">
                 <h2>
@@ -70,17 +74,29 @@
             </div>
             <div class="progress-title">
                 <h4>HTML5</h4>
-                <div class="progress-bar blue"></div>    
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>  
                 <h4>CSS3</h4>
-                <div class="progress-bar green"></div>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
                 <h4>JAVASCRIPT</h4>
-                <div class="progress-bar red"></div>    
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>   
                 <h4>PHOTOSHOP</h4>
-                <div class="progress-bar darkblue"></div> 
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
                 <h4>INDESIGN</h4>
-                <div class="progress-bar rose"></div>    
-                <h4>ILLUSTRATON</h4>
-                <div class="progress-bar yellow"></div>     
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>  
+                <h4>ILLUSTRATOR</h4>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>   
             </div>
         </section>
 
@@ -232,42 +248,52 @@
             <h2>
                 Loisirs
             </h2>
-            <img src="img/lecture.jpg" alt="livre ouvert poétique illustrant la lecture"/>
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="./img/lecture.jpg" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="./img/randonnee.gif" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="./img/anime.jpg" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="..." class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>First slide label</h5>
+                      <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="..." class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Second slide label</h5>
+                      <p>Some representative placeholder content for the second slide.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="..." class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Third slide label</h5>
+                      <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            <!--<img src="img/lecture.jpg" alt="livre ouvert poétique illustrant la lecture"/>
             <img src="img/randonnee.gif" alt="photo poétique illustrant la randonnée"/>
-            <img src="img/anime.jpg" alt="dessin des personnages du studio Ghibli illustrant les animés à regarder"/>
+            <img src="img/anime.jpg" alt="dessin des personnages du studio Ghibli illustrant les animés à regarder"/> -->
         </section>
-        <section id=contact>
-            <h2>
-                Contactez-moi :
-            </h2>
-            <form>
-                <div>
-                    <label for="lname">Nom de Famille: <span class="star">*</span></label>
-                    <input type="text" id="lname" name="lname" value="" placeholder="Votre nom" minlength="2" maxlength="25" required>
-                </div>
-        
-                <div>
-                    <label for="fname">Prénom: <span class="star">*</span></label>
-                    <input type="text" id="fname" name="fname" value="" placeholder="Votre prénom" minlength="2" maxlength="25" required>
-                </div>
-                <div>
-                    <label for="email">Email: <span class="star">*</span></label>
-                    <input type="email" id="email" name="email" value="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="example@yourbox.com" required>
-                </div>
-        
-                <div>
-                    <label for="tel">Téléphone : <span class="star">*</span></label>
-                    <input type="tel" id="tel" pattern="[0-9]{3}-[0-9]{3}" placeholder="123-456" required>
-                </div>
-                <div>
-                    <label for="Com">Votre message: <span class="star">*</span></label>
-                    <textarea id="Com" name="Com" rows="5"placeholder="Donnez moi les raisons de votre prise de contact." required></textarea>
-                </div>
-                <p>* champs obligatoire</p>
-                <input type="submit" value="Envoyer">
-            </form>
-        </section>
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+        <script src="./js/bootstrap.min.js"></script>
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
     </body>  
 </html>
